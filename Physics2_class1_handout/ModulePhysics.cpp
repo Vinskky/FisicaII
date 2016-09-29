@@ -6,7 +6,7 @@
 // TODO 1: Include Box 2 header and library
 #include "Box2D\Box2D\Box2D.h"
 
-#ifndef _DEBUG
+#ifdef _DEBUG
 #pragma comment (lib, "Box2D/libx86/Debug/Box2D.lib")
 #else
 #pragma comment (lib, "Box2D/libx86/Release/Box2D.lib")
@@ -44,15 +44,15 @@ bool ModulePhysics::Start()
 	circle.type = b2_staticBody;
 	circle.position.Set(PIXEL_TO_METERS*40, PIXEL_TO_METERS*40);
 	myWorld->CreateBody(&circle);
-
-	b2CircleShape shape;
-	shape.m_radius = PIXEL_TO_METERS*100;
-
+	
+	b2ChainShape circleShape;
+	circleShape.m_radius = PIXEL_TO_METERS * 10;
+	
 	b2FixtureDef fixture;
-	fixture.shape = &shape;
-	
+	fixture.shape = &circleShape;
+	b2Body* pointer = myWorld->CreateBody(&circle);
+	pointer->CreateFixture(&fixture);
 
-	
 	return true;
 }
 
