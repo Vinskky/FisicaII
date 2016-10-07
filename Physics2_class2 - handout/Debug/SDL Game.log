@@ -1,0 +1,5 @@
+﻿  ModuleSceneIntro.cpp
+c:\users\sebas\desktop\physics2_class2 - handout\modulesceneintro.cpp(66): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\sebas\desktop\physics2_class2 - handout\modulesceneintro.cpp(67): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\sebas\desktop\physics2_class2 - handout\modulesceneintro.cpp(68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  SDL Game.vcxproj -> C:\Users\Sebas\Desktop\Physics2_class2 - handout\Debug\2D Physics - class 2.exe
